@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="es">
+	<head>
+    	<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="custom.css">
+
+		<!-- Custom JS -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/loadComponents.js"></script>
+		<script src="js/bootstrap-input-spinner.js"></script>
+
+		<!-- FontAwesome -->
+		<script src="https://kit.fontawesome.com/b5bc2b42f9.js" crossorigin="anonymous"></script>
+    
+		<title>Plataformas de Publicación y Distribución — PEC2 — David Melero Cazorla</title>
+	</head>
+
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="index.html">Plataformas de Publicación y Distribución — PEC2</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Ejercicio 1 — Clip de vídeo incrustado en HTML 5
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="tarea_1_1.html">Tarea 1.1</a>
+							<a class="dropdown-item" href="tarea_1_2.html">Tarea 1.2</a>
+							<a class="dropdown-item" href="tarea_1_3.html">Tarea 1.3</a>
+							<a class="dropdown-item" href="tarea_1_4.html">Tarea 1.4</a>
+				  		</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Ejercicio 2 — Streaming de un vídeo
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="tarea_2_1.html">Tarea 2.1</a>
+							<a class="dropdown-item" href="tarea_2_2.html">Tarea 2.2</a>
+							<a class="dropdown-item" href="tarea_2_3.html">Tarea 2.3</a>
+							<a class="dropdown-item" href="tarea_2_4.html">Tarea 2.4</a>
+							<a class="dropdown-item" href="tarea_2_5.html">Tarea 2.5</a>
+							<a class="dropdown-item" href="tarea_2_6.html">Tarea 2.6</a>
+							<a class="dropdown-item" href="tarea_2_7.html">Tarea 2.7</a>
+							<a class="dropdown-item" href="tarea_2_8.html">Tarea 2.8</a>
+							<a class="dropdown-item" href="tarea_2_9.html">Tarea 2.9</a>
+						</div>
+				  	</li>
+			  </ul>
+			</div>
+		</nav>
+
+		<!-- Begin page content -->
+		<main role="main" class="container" style="margin-bottom: 80px;">
+			<h1 class="mt-5">Tarea 1.1 </h1>
+
+			<!-- Primera parte de la tarea-->
+			<!-- Enunciado-->
+			<p class="lead">Elige un clip de vídeo de máximo 20 segundos (puedes crearlo con tu dispositivo móvil, que tenga objetos en detalle y en movimiento) y codifícalo con Avidemux eligiendo el formato y resolución que creas adecuadas para su publicación en web. Teniendo en cuenta que no todos los navegadores aceptan todos los códecs, codifica el vídeo en los formatos necesarios para que sea compatible con el máximo de navegadores posible. Explica las decisiones tomadas en la codificación y el porqué de cada una. Confirma con la herramienta MediaInfo que lo ha codificado a la velocidad que querías.</p>
+ 			
+			<!-- Respuesta-->
+			<p>La especificación HTML5 introdujo el elemento <code>video</code> con el propósito de poder reproducir vídeo, sustituyendo parcialmente al elemento <code>object</code>. El elemento video de HTML5 tiene la intención de convertirse en el nuevo estándar para mostrar vídeo en la web, sustituyendo a Adobe Flash que era el estándar de facto previo. Sin embargo, la adopción se ha visto afectada por la falta de acuerdo en que códecs de vídeo y audio deben ser soportados por los navegadores web.</p>
+			
+			<p>La documentación proporcionada por Mozilla recopila las características de los códecs más usados en la web. Para cada uno de ellos se lista además los contenedores que pueden soportarlo e información adicional como, por ejemplo, la compatibilidad con diferentes navegadores web.</p>
+			
+			<p>La siguiente tabla pretende resumir la información más relevante que sería necesaria tener en cuenta para tomar la decisión relativa al formato de codificación a utilizar.</p>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Códec</th>
+						<th scope="col">Contenedor</th>
+						<th scope="col">Descripción</th>
+						<th scope="col" style="min-width: 200px;">Compatibilidad</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">VP9</th>
+						<td>MP4, Ogg y WebM</td>
+						<td>Video Processor 9 (VP9) es el sucesor estándar VP8 desarrollado por Google y es completamente abierto y libre de royalties. Su rendimiento de codificación y decodificación es comparable o ligeramente más rápido que el de AVC, pero con mejor calidad. La calidad de video codificado de VP9 es comparable a la de HEVC a velocidades de bits similares.</td>
+						<td>
+							<ul>
+								<li>Chrome: 29</li>
+								<li>Edge: 14</li>
+								<li>Firefox: 28</li>
+								<li>Internet Explorer: No</li>
+								<li>Opera: 10.6</li>
+								<li>Safari: No</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">VP8</th>
+						<td>3GP, Ogg y WebM</td>
+						<td>Video Processor 8 (VP8) fue creado inicialmente por On2 Technologies. Tras la compra de On2, Google lanzó VP8 como un formato de video abierto y libre de royalties. En términos de calidad y tasa de compresión, VP8 es comparable a AVC.</td>
+						<td>
+							<ul>
+								<li>Chrome: 25</li>
+								<li>Edge: 14</li>
+								<li>Firefox: 4</li>
+								<li>Internet Explorer: 9</li>
+								<li>Opera: 16</li>
+								<li>Safari: 12.1</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Theora</th>
+						<td>Ogg</td>
+						<td>Theora, desarrollado por Xiph.org, es un códec de video abierto y gratuito que puede usarse sin royalties ni licencias. Theora es comparable en calidad y tasas de compresión a MPEG-4 Part 2 Visual y AVC, lo que la convierte en una buena opción.</td>
+						<td>
+							<ul>
+								<li>Chrome: 3</li>
+								<li>Edge: Sí</li>
+								<li>Firefox: 3.5</li>
+								<li>Internet Explorer: No</li>
+								<li>Opera: 10.5</li>
+								<li>Safari: No</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">AVC (H.264)</th>
+						<td>3GP, MP4 y WebM</td>
+						<td>El estándar de codificación de video avanzada (AVC) está especificado por la especificación ITU H.264 y la especificación MPEG-4 Parte 10. Es un códec basado en compensación de movimiento ampliamente usado en todo tipo de medios, incluida la transmisión de televisión, videoconferencia RTP y como códec de video en discos Blu-Ray.</td>
+						<td>
+							<ul>
+								<li>Chrome: 4</li>
+								<li>Edge: 12</li>
+								<li>Firefox: 35</li>
+								<li>Internet Explorer: 9</li>
+								<li>Opera: 25</li>
+								<li>Safari: 3.2</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">HEVC (H.265)</th>
+						<td>MP4</td>
+						<td>El códec de codificación de video de alta eficiencia (HVEC) está definido por el H.265 de la UIT, así como por MPEG-H Parte 2. HEVC fue diseñado para admitir una codificación y decodificación eficiente de video en tamaños que incluyen resoluciones muy altas (incluido el video de 8K). En teoría, HEVC puede lograr tamaños de archivo comprimidos que son la mitad que AVC pero con una calidad de imagen comparable.</td>
+						<td>
+							<ul>
+								<li>Chrome: No</li>
+								<li>Edge: 18</li>
+								<li>Firefox: No</li>
+								<li>Internet Explorer: 11</li>
+								<li>Opera: No</li>
+								<li>Safari: 11</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>Mozilla realiza una serie de recomendaciones a la hora de escoger el contenedor y los contenedores el vídeo empotrado en HTML5 teniendo en cuenta diferentes casos de uso. En el ejercicio se seguirá la recomendación general que se describe a continuación:</p>
+			
+			<ul>
+				<li>Un contenedor <b>WebM</b> usando el códec <b>VP9</b> para vídeo y el codec <b>Opus</b> para el audio. Todos son formatos abiertos, libres de royalties y generalmente bien soportados, aunque sólo en los navegadores más recientes, por lo que se recomienda una opción de respaldo.</li>
+				<li>Un contenedor <b>MP4</b> con el códec <b>AVC (H.264)</b> para vídeo y <b>ACC</b> como códec de audio. Esta combinación es también ampliamente soportada por los grandes navegadores web y la calidad es adecuada para la mayoría de los casos de uso.</li>
+			</ul>
+
+			<p>La tasa de bits a la que se codificará el flujo de vídeo estará íntimamente relacionada con el ancho de banda disponible para la transmisión de datos de los clientes. El objetivo es hacer un uso efectivo de la descarga progresiva de contenido que habilita HTML5 y permitir a los usuarios iniciar la reproducción sin la necesidad de descargar el archivo completamente y sin sufrir pausas durante la reproducción. Esto es posible si el ancho de banda consumido por los flujos de vídeo y audio debe ser menor al ancho de banda disponible para la transmisión de datos.</p>
+			
+			<p>Para determinar la tasa de bits a la que se codificará el flujo de vídeo, no se considerará el flujo de audio a efectos de este ejercicio, es necesario determinar el ancho de banda disponible para la transmisión de los usuarios.  Se pueden considerar dos usuarios tipo:</p>
+			
+			<ul>
+				<li>Usuarios conectados a Internet mediante una conexión de ADLS doméstica cuyo ancho de banda para la transmisión disponible en el peor de los casos será de 12 Mbit/s.</li>
+				<li>Usuarios conectados a una red móvil 4G o, en el peor de los caos, a una red 3G de buena calidad (HSDPA). En este caso se considerará un peor caso de 14.4 Mbit/s.</li>
+			</ul>
+
+			<p>Como referencia en el documento H.264 Primer se proporciona la siguiente fórmula para estimar la tasa de bits ideal basándose en las características del vídeo:</p>
+
+			<img src="assets/img/1_1_Formula.png" class="img-fluid mx-auto d-block" class="mx-auto d-block" style="max-width: 500px; margin: 1em;">
+
+			<p>donde el rango de movimiento es un número entre 1 y 4, siendo 1 bajo movimiento, 2 movimiento medio y 4 una alta cantidad de movimiento, es decir, una gran cantidad de datos que cambian entre imágenes.</p>
+
+			<p>Dado que HTTP utiliza la pila TCP/IP el ancho de banda disponible y el retardo de transmisión no están garantizados y pueden ser variables se propone utilizar un 50% del ancho de banda considerado para los usuarios tipo, es decir, el <b>flujo de vídeo</b> se codificará con una <b>tasa de 6.000 Kbit/s</b>.</p>
+			
+			<p>El número de imágenes por segundo a la que se codificará el clip de vídeo es de <b>30 imágenes por segundo</b> al tratarse de una velocidad estándar en codificación de vídeo digital y ser la velocidad a la que se encuentra codificado el flujo de vídeo original.</p>
+			
+			<p>Por último, se seleccionará la resolución a la que se codificará el clip de vídeo. Se ha de tener en cuenta que una resolución excesivamente alta para la tasa de bits utilizada, lo que se traduciría en un factor de compresión alto respecto a la eficiencia del códec, podría traducirse en una pérdida de calidad de imagen.</p>
+			
+			<p>Con la ayuda de esta ecuación se ha realizado una estimación de la tasa de bits necesaria para codificar el vídeo en tres resoluciones diferentes como se muestra en la tabla inferior.</p>
+      
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Resolución</th>
+						<th scope="col">Rango de movimiento = 1</th>
+						<th scope="col">Rango de movimiento = 2</th>
+						<th scope="col">Rango de movimiento = 4</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row"> 1080p (1.920x1080)
+						</th>
+						<td>4.253 kbit/s</td>
+						<td>8.505 kbit/s</td>
+						<td>17.010 kbit/s</td>
+					</tr>
+					<tr>
+						<th scope="row"> 720p (1280x720)
+						</th>
+						<td>1.890 kbit/s</td>
+						<td>3.780 kbit/s</td>
+						<td>7.560 kbit/s</td>
+					</tr>
+					<tr>
+						<th scope="row"> 480p (852x480)
+						</th>
+						<td>839 kbit/s</td>
+						<td>1.677 kbit/s</td>
+						<td>3.355 kbit/s</td>
+					</tr>
+				</tbody>
+			</table>
+      
+			<p>Considerando un rango de movimiento medio, el clip comprimido con el códec <b>AVC (H.264)</b> deberá ser codificado con una <b>resolución de 1280x720 píxeles</b> para garantizar una buena calidad de imagen. Se trata de una resolución adecuada para los dispositivos actuales y permitiría una reproducción de este a pantalla completa sin una pérdida de definición.</p>
+
+			<p>El códec <b>VP9</b> tiene unas características similares a HEVC (H.265), lo que implica que su factor de compresión es hasta un 50% superior a AVC (H.264), por lo que el clip podría ser codificado con una <b>resolución de 1920x1080 píxeles</b> manteniendo la calidad de imagen.</p>
+
+			<p>Por tanto, se ha procedido a codificar dos clips de vídeo con las características mostradas a continuación para garantizar la máxima compatibilidad con los navegadores actuales y la mejor calidad de imagen posible para una reproducción continua en el caso de usuarios conectados a través de ADSL o una red móvil 3G HSDPA.</p>
+      
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Característica</th>
+						<th scope="col">Clip principal</th>
+						<th scope="col">Clip de respaldo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Contenedor</th>
+						<td>WebM</td>
+						<td>MP4</td>
+					</tr>
+					<tr>
+						<th scope="row">Códec vídeo</th>
+						<td>VP9</td>
+						<td>AVC (H.264)</td>
+					</tr>
+					<tr>
+						<th scope="row">Códec audio</th>
+						<td>Opus</td>
+						<td>ACC</td>
+					</tr>
+					<tr>
+						<th scope="row">Resolución</th>
+						<td>1.920x.1080 píxeles</td>
+						<td>1.280x720 píxeles</td>
+					</tr>
+					<tr>
+						<th scope="row">Tasa de imágenes</th>
+						<td>30 fps</td>
+						<td>30 fps</td>
+					</tr>
+					<tr>
+						<th scope="row">Tasa de bits del flujo de vídeo</th>
+						<td>6.000 kbit/s</td>
+						<td>6.000 kbit/s</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>Las siguientes capturas de pantalla muestran la información que reporta MediaInfo sobre los clips tras codificarlos. Como se puede apreciar en ambos casos la tasa de bits resultante es ligeramente superior a la especificada siendo algo mayor en el caso de WebM y VP9 pese a utilizarse la estrategia de codificación de tasa de bits medio y 2 pasadas.</p>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">WebM - VP9 - Opus</th>
+						<th scope="col">MP4 - AVC (H.264) - ACC</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>		
+							<img src="assets/img/1_1_MediaInfo_WebM.png" class="img-fluid mx-auto d-block">
+						</td>
+						<td>
+							<img src="assets/img/1_1_MediaInfo_MP4.png" class="img-fluid mx-auto d-block">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>Por último, hay que destacar que para asegurar que es posible realizar una descarga progresiva es necesario que, en el caso del clip codificado utilizando un contenedor MP4, el bloque de índice que contiene el índice se encuentra al principio del archivo como se muestra en la captura de pantalla de la configuración de Avidemux. </p>
+
+			<img src="assets/img/1_1_Avidemux_Idx.png" class="img-fluid mx-auto d-block" class="mx-auto d-block" style="max-width: 500px">
+
+		</main>
+
+		<!-- Begin of footer-->
+		<footer class="footer">
+			<div class="container">
+				<span class="text-muted">Plataformas de Publicación y Distribución (PEC2) — David Melero Cazorla</span>
+			</div>
+		</footer>
+		
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>

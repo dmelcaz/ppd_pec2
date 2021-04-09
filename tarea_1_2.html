@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="custom.css">
+
+		<!-- Custom JS -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/loadComponents.js"></script>
+		<script src="js/bootstrap-input-spinner.js"></script>
+
+		<!-- FontAwesome -->
+		<script src="https://kit.fontawesome.com/b5bc2b42f9.js" crossorigin="anonymous"></script>
+		
+		<title>Plataformas de Publicación y Distribución — PEC2 — David Melero Cazorla</title>
+	</head>
+
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="index.html">Plataformas de Publicación y Distribución — PEC2</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Ejercicio 1 — Clip de vídeo incrustado en HTML 5
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="tarea_1_1.html">Tarea 1.1</a>
+							<a class="dropdown-item" href="tarea_1_2.html">Tarea 1.2</a>
+							<a class="dropdown-item" href="tarea_1_3.html">Tarea 1.3</a>
+							<a class="dropdown-item" href="tarea_1_4.html">Tarea 1.4</a>
+				  		</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Ejercicio 2 — Streaming de un vídeo
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="tarea_2_1.html">Tarea 2.1</a>
+							<a class="dropdown-item" href="tarea_2_2.html">Tarea 2.2</a>
+							<a class="dropdown-item" href="tarea_2_3.html">Tarea 2.3</a>
+							<a class="dropdown-item" href="tarea_2_4.html">Tarea 2.4</a>
+							<a class="dropdown-item" href="tarea_2_5.html">Tarea 2.5</a>
+							<a class="dropdown-item" href="tarea_2_6.html">Tarea 2.6</a>
+							<a class="dropdown-item" href="tarea_2_7.html">Tarea 2.7</a>
+							<a class="dropdown-item" href="tarea_2_8.html">Tarea 2.8</a>
+							<a class="dropdown-item" href="tarea_2_9.html">Tarea 2.9</a>
+						</div>
+				  	</li>
+			  </ul>
+			</div>
+		</nav>
+
+		<!-- Begin page content -->
+		<main role="main" class="container" style="margin-bottom: 80px;">
+			<h1 class="mt-5">Tarea 1.2 </h1>
+      
+			<!-- Primera parte de la tarea-->
+			<!-- Enunciado-->
+			<p class="lead">Crea la web, genera un fichero <code>.html</code> mediante un editor de texto, incrústale el clip de vídeo codificado utilizando el tag <code>&lt;video&gt;</code> de HTML5 y prepara la web para que pueda ser visualizada desde la mayoría de los navegadores.</p>
+			<p class="lead">¿Qué características se pueden destacar de la publicación y visualización de un vídeo en HTML5 respecto a otros métodos de publicación?</p>
+
+			<!-- Respuesta-->
+			<p>La incrustación de los clips de vídeo codificados se hace utilizando la etiqueta <code>video</code> de HTML5. Dentro de ella se indicarán las fuentes de vídeo que se utilizarán con la etiqueta <code>source</code>. El resultado es el siguiente bloque de código:</p>
+
+			<!-- Bloque de código-->
+			<pre style="background-color: whitesmoke;"><code>
+	&lt;div class=&quot;embed-responsive embed-responsive-16by9&quot; style=&quot;margin-bottom: 2em;&quot;&gt;
+		&lt;video class=&quot;pec_video&quot;&gt;
+			&lt;source src=&quot;assets/video_1080p.webm&quot; type=&quot;video/webm&quot;&gt;
+			&lt;source src=&quot;assets/video_720p.mp4&quot; type=&quot;video/mp4&quot;&gt;
+			El navegador no soporta la etiqueta &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;.
+		&lt;/video&gt;
+	&lt;/div&gt;
+			</code></pre>
+	
+			<p>El bloque de código da como resultado el siguiente vídeo incrustado:</p>
+
+			<!-- video -->
+			<div class="embed-responsive embed-responsive-16by9">
+				<video class="pec_video">
+					<source src="assets/video_1080p.webm" type="video/webm">
+					<source src="assets/video_720p.mp4" type="video/mp4">
+					El navegador no soporta la etiqueta <code>&lt;video&gt;</code>.
+				</video>
+			</div>
+
+			<p class="text-muted" style="margin-bottom: 1em;">Imágenes de stock proporcionadas por Videvo, descargadas de <a href="https://www.videvo.net/es/video/new-york-train-pulling-away-from-station/5213/">www.videvo.net</a></p>
+
+			<p>El atributo type indicando el MIME de los dos clips codificados para que el navegador realice la negociación de contenido, descargando el primero de los clips que sea soportado. En el caso de que el navegador no fuese compatible con la etiqueta <code>video</code> de HTML5 se mostraría el mensaje <i>El navegador no soporta los clips de vídeo incrustados</i>.</p>
+
+			<p>Para darle formato a la web se ha utilizado el framework CSS Bootstrap que permite formatear con facilidad las webs proporcionando un diseño responsive y orientado a dispositivos móviles. El vídeo se ha colocado dentro de un contendor <code>div</code> de las clases <code>embed-responsive</code> y <code>embed-responsive-16by9</code> para garantizar que el contenido se adapta a las características del dispositivo.</p>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Navegador de escritorio</th>
+						<th scope="col">Dispositivo móvil</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>		
+							<img src="assets/img/1_2_Escritorio.png" class="img-fluid mx-auto d-block">
+						</td>
+						<td>
+							<img src="assets/img/1_2_Movil.png" class="img-fluid mx-auto d-block">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>Por defecto los controles de reproducción del clip de vídeo no son visibles. Una opción es utilizar el atributo controls en la etiqueta video pero sería incómodo para el usuario no poder quitarlos de la visualización. Por este motivo se ha optado por un script utilizando la librería jQuery para mostrar los controles cuando el ratón entra en el vídeo y ocultarlos cuando sale.</p>
+
+			<p>El script utilizado es el mostrado a continuación y se aplicaría sobre los elementos de la clase <code>pec_video</code> que en este ejercicio son los clips de video incrustado.</p>
+
+			<pre style="background-color: whitesmoke;"><code>
+	$("document").ready( function() {
+
+		// Show video controls when mouse enters the video window
+		$(".pec_video").mouseenter( function() {
+			$(this).attr('controls','true');
+		});
+				
+		// Hide video controls when mouse leaves the video window
+		$(".pec_video").mouseleave( function() {
+			$(this).removeAttr('controls');
+		});
+	});
+			</code></pre>
+
+			<p>Las principales ventajas asociadas a la distribución de vídeo mediante HTML están asociadas a la sencillez de la tecnología requerida: un servidor web que hace uso del protocolo HTTP, el fichero de vídeo y la página HTML donde se integra el vídeo. El cliente solicita la descarga del vídeo, que almacena temporalmente en la caché del navegador, como lo haría con cualquier otro documento. La distribución de vídeo mediante HTML ha ido evolucionando y se ha pasado de la descarga progresiva, que permitía al usuario reproducir el clip mientras se descargaba, al streaming adaptativo sobre HTTP o DASH.</p>
+
+			<p>DASH es una técnica de streaming de tasa de bits adaptativa que habilita el streaming de contenido multimedia utilizando los servidores web HTTP tradicionales. DASH divide el contenido en una secuencia de pequeños fragmentos, que se sirven a través de HTTP. Cada fragmento contiene un intervalo corto de tiempo y está disponible en diferentes tasas de bits. Mientras el contenido está siendo reproducido por el usuario se utiliza un algoritmo de adaptación de tasa de bits (ABR) para seleccionar automáticamente el fragmento con la velocidad de bits más alta posible que se puede descargar a tiempo para la reproducción sin causar paradas. o reposicionar eventos en la reproducción.</p>
+
+		</main>
+
+		<!-- Begin of footer-->
+		<footer class="footer">
+			<div class="container">
+				<span class="text-muted">Plataformas de Publicación y Distribución (PEC2) — David Melero Cazorla</span>
+			</div>
+		</footer>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
