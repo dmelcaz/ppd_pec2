@@ -66,18 +66,58 @@
 
 		<!-- Begin page content -->
 		<main role="main" class="container" style="margin-bottom: 20px;">
-			<h1 class="mt-5">Tarea 2.8</h1>
+			<h1 class="mt-5">Tarea 2.9</h1>
       
 			<!-- Primera parte de la tarea-->
 			<!-- Enunciado-->
-			<p class="lead">Estando en el caso a 200 kbps, mediante la barra deslizante del VLC emisor avanza o retrocede unos minutos en la reproducción y mira cómo se comporta el VLC receptor. ¿Cuántos segundos tarda en reaccionar y por qué no reacciona de manera inmediata? Al hacerlo, ¿qué pasa con la imagen y cómo se relaciona con la estructura GOP de H.264/AVC y sus fotogramas I, B y P?</p>
+			<p class="lead">Realiza de nuevo las tareas 2.7 y 2.8 pero con el clip codificado con Avidemux en HEVC (x265) a 3000 Kbps y MP3 con contenedor MKV, denomínalo clip02. ¿Qué diferencias encuentras?</p>
 			
             <!-- Respuesta-->
-			<p>Al desplazar la barra deslizante en el emisor el receptor tarda unos segundos en reaccionar. Como se comentó en el apartado 2.4 el cliente utiliza un búfer en el que almacena el vídeo recibido pero aún no reproducido con el fin de mitigar el retardo extremo a extremo durante la transmisión de la señal. El tiempo de reacción corresponde a la suma del retardo de transmisión y el retardo de reproducción.</p>
+			<p>La captura de MediaInfo muestra como el clip ha sido codificado con HEVC a una tasa de bits de 3.000 kbit/s, con el códec de audio MP3 y almacenado en un contenedor MKV.</p>
 
-            <p>Cuando reacciona se produce un defecto de imagen asociado a la propagación de errores durante la decodificación de un grupo de imágenes (GOP). Al saltar a un punto localizado en mitad de un grupo de imágenes y no disponer de la imagen intraframe de referencia (I-Frame) se producen errores en la decodificación al no poder referenciar adecuadamente las imágenes. Estos errores se propagan hasta que el cliente recibe el intraframe del siguiente GOP.</p>
+            <img src="assets/img/2_9_MediaInfo.png" class="mx-auto d-block" style="max-width: 500px; margin:1em">
 
-            <img src="assets/img/2_8_Propagacion.png" class="mx-auto d-block" style="max-width: 800px">
+            <p>Hasta este apartado la versión de VLC utilizada para la realización de la práctica ha sido la 2.2.8, sin embargo, existe un bug solucionado en la versión 3.0.12 que genera problemas en la transcodificación de clips codificados con el códec de vídeo HEVC. Como se muestra en las capturas mostradas a continuación, el receptor no se recibe el flujo de vídeo.</p>
+
+            <table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Emisor</th>
+						<th scope="col">Receptor</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>		
+							<img src="assets/img/2_9_Emisor_VLC2.png" class="img-fluid mx-auto d-block">
+						</td>
+						<td>
+							<img src="assets/img/2_9_Receptor_VLC2.png" class="img-fluid mx-auto d-block">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+            <p>Si se realiza el aparatado con la versión de VLC 3.0.12 se puede observar como tras la transcodificación el flujo de vídeo visto por el receptor está codificado con AVC (H.264) y no coincide con el flujo códec del flujo de origen. Debido al proceso de transcodificación no se aprecian cambios significativos en la calidad de imagen ya que las características del flujo emitido se mantienen.</p>
+
+            <table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Emisor</th>
+						<th scope="col">Receptor</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>		
+							<img src="assets/img/2_9_Emisor_VLC3.png" class="img-fluid mx-auto d-block">
+						</td>
+						<td>
+							<img src="assets/img/2_9_Receptor_VLC3.png" class="img-fluid mx-auto d-block">
+						</td>
+					</tr>
+				</tbody>
+			</table>
 
 		</main>
 
